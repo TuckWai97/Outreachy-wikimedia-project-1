@@ -7,9 +7,10 @@ Your python code needs to get the urls from the file and print their status code
 
 e.g. `(200) https://www.nytimes.com/1999/07/04/sports/women-s-world-cup-sissi-of-brazil-has-right-stuff-with-left-foot.html`
 
-Take note:
+**Take note!!**
 
 **Please make sure to install requests library on your computer.**
+
    `pip install requests`
 
 
