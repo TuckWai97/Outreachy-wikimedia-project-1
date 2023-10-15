@@ -27,5 +27,6 @@ There are 2 functions in the script:
       - assign index 0 as the url in csv file is in first column, calls `catch_status_code_exception_error` function which in turn will call `get_status_code` function to get status code and get a formatted string literal in format of `(status_code) url` , finally print out as output.
 
 ### Some findings:
-- for `request.get`, if added with `timeout`, I attempted 10,15,20 , it will causes the url that started with `https://web.archive.org` to have `ReadTimeout` exception error instead of `200` as `OK` for status code due to insufficient time to complete the HTTP request.
-- 
+- for `request.get`, if added with `timeout`, I attempted 10,15,20 , it will causes the url that started with `https://web.archive.org` to have `ReadTimeout` exception error instead of `200` as `OK` for status code due to insufficient time to complete the HTTP request, so I not using it, but according to 
+-  `https://www.ussoccer.com/news/womens-national-team/2009/07/remembering-99-sissi.aspx` has `ConnectionError` instead of `404 Not Found` status code when running with the same code, which I verified it should be `404` by browsing the website.
+- `https://www.socceramerica.com/publications/article/93014/california-storm-captures-fourth-wpsl-championship.html` I get `ConnectionError` ,but when I browsing to the website , it can be viewed but just need to login using account.
