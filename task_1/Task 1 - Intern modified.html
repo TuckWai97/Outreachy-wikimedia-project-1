@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tuck Wai - Task 1</title>
+        <style>.block { background-color:gainsboro; padding:1em; } </style>
+    </head>
+    <body>
+        <h1>Tuck Wai - Task 1</h1>
+        <h2>My code:</h2>
+        <p id="code" class="block"></p>
+        <h2>Results of my code:</h2>
+        <p id="results" class="block"></p>
+        <script id="task_id">
+            //{# INPUT #}
+            let data = [
+                {"page_id": 6682420, "creation_date": "2021-09-13", "title": "André Baniwa"},
+                {"page_id": 4246775, "creation_date": "2013-12-10", "title": "Benki Piyãko"},
+                {"page_id": 5882073, "creation_date": "2018-12-03", "title": "Célia Xakriabá"},
+                {"page_id": 6977673, "creation_date": "2022-10-05", "title": "Chirley Pankará"},
+                {"page_id": 7069044, "creation_date": "2023-02-16", "title": "Cristine Takuá"},
+                {"page_id": 2119511, "creation_date": "2009-01-28", "title": "Eliane Potiguara"},
+                {"page_id": 6714407, "creation_date": "2021-10-09", "title": "Jaider Esbell"},
+                {"page_id": 6977117, "creation_date": "2022-10-04", "title": "Jerônimo Rodrigues"},
+                {"page_id": 6935831, "creation_date": "2022-08-02", "title": "Nanblá Gakran"},
+                {"page_id": 4908665, "creation_date": "2015-11-13", "title": "Sônia Guajajara"},
+                {"page_id": 5886895, "creation_date": "2018-12-12", "title": "Vãngri Kaingáng"},
+                {"page_id": 6549130, "creation_date": "2021-04-10", "title": "Zezico Guajajara"},
+            ];
+            
+            // Function to format a date in the specified format
+            function formatDate(dateString) {
+
+                // call Date() constructor to pass with dateString variable 
+                const creationDate = new Date(dateString);
+                
+                // Customize options argument for toLocaleDateString()
+                const dateOptions = { month:'long', day:'numeric', year:'numeric'};
+                
+                // Return date with format of MONTH DAY, YEAR as US English use month-day-year order
+                return creationDate.toLocaleDateString("en-US", dateOptions);
+            }
+          
+            // Get the HTML element with the ID "results"
+            const resultElement = document.getElementById("results");
+
+            // Function to display the data in the format of Article "ARTICLE TITLE" (Page ID PAGEID) was created at MONTH DAY, YEAR.
+            function displayData(data) {
+                
+                // `forEach()` loop iterate through data array, for each iteration, eachArticle holds each row of data array
+                // => arrow function is compact alternative to traditional function expression
+                data.forEach(eachArticle => {
+
+                    // Extracts the properties `title`, `page_id`, and `creation_date` from `eachArticle` by using object destructuring
+                    //In other words, during each iteration, `eachArticle` stores each row in `data` array and the variables, `title`, page_id`, and `creation_date` stores the values of corresponding properties,this allows to work with properties of `eachArticle` individually.
+                    const { title, page_id, creation_date } = eachArticle;
+
+                    // Calls `formatDate()` function to get the formatted date
+                    const formattedDate = formatDate(creation_date);
+
+                    // Create template literals using (``) to include variable like `title`,`page_id`, and `formattedDate` using `${}`to replace with actual value of the variable.
+                    const outputText = `Article "${title}" (Page ID ${page_id}) was created at ${formattedDate}.`;
+                    
+                    // Create a new <p> element
+                    const paragraphElement = document.createElement("p");
+
+                    // Set the content of the <p> element to the value of "output" using `textContent` property
+                    paragraphElement.textContent = outputText;
+
+                    // Append the newly created <p> element to the "resultsElement"
+                    resultElement.appendChild(paragraphElement);
+                });
+            }
+    
+            // Call the function to display results
+            displayData(data);
+        </script>
+        <script>
+            document.getElementById("code").innerText = document.getElementById("task_id").text;
+        </script>
+    </body>
+</html>
