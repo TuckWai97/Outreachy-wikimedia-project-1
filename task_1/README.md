@@ -13,5 +13,5 @@ e.g. Article "André Baniwa" (Page ID 6682420) was created at September 12, 2021
 - `formatDate()` function is used to format the date using `toLocaleDateString` method by using `en-US` as `locale` parameter as it uses `month-day-year` order and customized using `options` parameter on `month`, `year` and `day`  to return the specific form of formatted date string.
 - `displayData` function to display the final output.Inside the function, it uses the `forEach()` method to access the `data` array in `line 16 to 29`, it will be executed once to get the each element of data array in ascending index order and stores in `eachArticle`, literally it means **for each item(eachArticle) will store each line that with properties `page_Id`, `creation_date` and `title` that was in `data` array.**
  - for each time, `outputText` will format the output in the form of `Article "ARTICLE TITLE" (Page ID PAGEID) was created at MONTH DAY, YEAR.` by using value inside `${}` and  the whole string is wrapped with "``" to embed expressions and variables inside a string.
- - `results` HTML ID with `resultElement` variable will have each paragraph element,`outputText` with format required as in the task objective.
+ - `results` HTML ID with `resultElement` variable will have each paragraph element,`outputText` with format required as in the task.
  
