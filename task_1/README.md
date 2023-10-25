@@ -13,7 +13,7 @@ e.g. Article "André Baniwa" (Page ID 6682420) was created at September 12, 2021
    ```bash
    git clone https://github.com/TuckWai97/Outreachy-wikimedia-project-1.git
    ```
-2. Double click on the `Task 1 - Intern.html` file, the html content will show up in a browser.
+2. Navigate to the `Outreachy-wikimedia-project-1/task_1` folder, then double click on the `Task 1 - Intern.html` file, the html content will show up in a browser.
 
 ### How it works:
 
