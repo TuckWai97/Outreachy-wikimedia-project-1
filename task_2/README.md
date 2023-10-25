@@ -12,9 +12,9 @@ e.g. `(200) https://www.nytimes.com/1999/07/04/sports/women-s-world-cup-sissi-of
    ```bash
    git clone https://github.com/TuckWai97/Outreachy-wikimedia-project-1.git
    ```
-2. Change directory to Outreachy-wikimedia-project-1
+2. Change directory to Outreachy-wikimedia-project-1/task_2
     ```bash
-    cd Outreachy-wikimedia-project-1
+    cd Outreachy-wikimedia-project-1/task_2
     ```
 3. Create a virtual environment to isolate project dependencies
    ```bash
