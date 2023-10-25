@@ -8,7 +8,7 @@ Your python code needs to get the urls from the file and print their status code
 e.g. `(200) https://www.nytimes.com/1999/07/04/sports/women-s-world-cup-sissi-of-brazil-has-right-stuff-with-left-foot.html`
 
 ### Setup on your local machine:
-1. Clone using git clone from my repo (jump this step if you already do it in Outreachy-wikimedia-project-1/task_1)
+1. Clone using git clone from my repo (jump to next step if you already do it in Outreachy-wikimedia-project-1/task_1)
    ```bash
    git clone https://github.com/TuckWai97/Outreachy-wikimedia-project-1.git
    ```
