@@ -8,6 +8,13 @@ Article "ARTICLE TITLE" (Page ID PAGEID) was created at MONTH DAY, YEAR.
 
 e.g. Article "André Baniwa" (Page ID 6682420) was created at September 12, 2021
 
+### Setup on your local machine:
+1. Clone using git clone from my repo
+   ```bash
+   git clone https://github.com/TuckWai97/Outreachy-wikimedia-project-1.git
+   ```
+2. Double click on the `Task 1 - Intern.html` file, the html content will show up in a browser.
+
 ### How it works:
 
 - `formatDate()` function is used to format the date using `toLocaleDateString` method by using `en-US` as `locale` parameter as it uses `month-day-year` order and customized using `options` parameter on `month`, `year` and `day`  to return the specific form of formatted date string.
