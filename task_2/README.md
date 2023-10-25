@@ -7,12 +7,40 @@ Your python code needs to get the urls from the file and print their status code
 
 e.g. `(200) https://www.nytimes.com/1999/07/04/sports/women-s-world-cup-sissi-of-brazil-has-right-stuff-with-left-foot.html`
 
-**Take note!!**
+### Setup on your local machine:
+1. Clone using git clone from my repo
+   ```bash
+   git clone https://github.com/TuckWai97/Outreachy-wikimedia-project-1.git
+   ```
+2. Change directory to Outreachy-wikimedia-project-1
+    ```bash
+    cd Outreachy-wikimedia-project-1
+    ```
+3. Create a virtual environment to isolate project dependencies
+   ```bash
+   python -m venv env
+   ```
+4. Activate your virtual environment
 
-**Please make sure to install requests library on your computer.**
+   - For Windows
+      - If use command.exe
+        ```bash
+        \env\Scripts\activate.bat
+        ```
+       - Powershell
+         ```bash
+          \env\Scripts\Activate.ps1
+          ```
+> 'env' is your previous created virtual environment name. *Note:* You can refer to documentation her for more detail: https://docs.python.org/3/tutorial/venv.html
 
-   `pip install requests`
-
+5. Use pip to install requests library 
+   ```
+   python -m pip install requests
+   ```
+6. Run python script:
+   ```
+   python status_code_url.py
+   ```
 
 ### Brief explanation:
 
