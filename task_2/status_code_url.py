@@ -23,15 +23,6 @@ def get_status_code(csv_url):
 # catch_status_code_exception_error function is used handling the status code exception error and get the final output into the required format in task as below:
 # (STATUS_CODE) URL
 
-# Args:
-#      url: url string
-# Returns:
-#      f"(status_code) url" : if HTTP request successfully and get response status code
-#      f"(ConnectionError) {url}" : HTTP request failed with connection error
-#      f"(URLRequired) {url}"     : HTTP request failed with invalid URL
-#      f"(ReadTimeout) {url}"     : HTTP request failed with server not sending any data in the allotted time
-#      f"(TooManyRedirects) {url}": HTTP request has too many redirects
-#
 def catch_status_code_exception_error(url):
     try:
         # calls "get_status_code()" function and store status code in "status_code" variable    
@@ -56,13 +47,6 @@ def catch_status_code_exception_error(url):
     
 
 # Implement code using "with open(filename, mode) as alias_filename", by replacing "filename" with your file, and select "mode" as below and "alias_filename" with the alias you would name the file for more convenient.
-# "with()" statement is used in exception handling to make code cleaner and much more readable, so there is no need to call file.close() since with statement automatically closes the file after completed reading it.
-# ".open()" function opens a file, return it as file object, `mode` defines which mode you want to open the file.
-# 'r' - to read an existing file,
-# 'w' - to create a new file if given file doesn't exist and write to it,
-# 'a' - to append to existing file content,
-# '+' - to create a new file for reading and writing
-
 # in this case, 'r' is used to read the existing file(the Task 2-Intern.csv that assigned as 'input_csv' as on the line 11)
 with open(input_csv, "r") as inputfile: 
 
