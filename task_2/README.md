@@ -76,4 +76,9 @@ There are 2 functions in the script:
          -  More concise and readable: F-strings are generally more readable and concise. Because you can embed variables and expressions directly within the string, they can be easier to understand and maintain.
          -  Faster: F-strings are also a bit faster than the % operator and .format() method. This efficiency becomes more noticeable in programs that deal with a large number of strings.
          -  F-strings also have the = specifier, which can help you debug your code by displaying the expression and its resulting value. This feature isn’t available in the other formatting methods. It’s unique to f-strings.
-
+- "with()" statement is used in exception handling to make code cleaner and much more readable, so there is no need to call file.close() since with statement automatically closes the file after completed reading it.
+    ".open()" function opens a file, return it as file object, `mode` defines which mode you want to open the file.
+    'r' - to read an existing file,
+    'w' - to create a new file if given file doesn't exist and write to it,
+    'a' - to append to existing file content,
+    '+' - to create a new file for reading and writing
