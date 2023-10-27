@@ -67,7 +67,6 @@ There are 2 functions in the script:
 - `https://dibradoras.com.br/2020/12/05/time-de-tradicao-no-feminino-avai-kindermann-tem-craques-formadas-em-casa/` is able to viewed via browser, but output from code is `406`, which is ***response is sent when the web server, after performing server-driven content negotiation, doesn't find any content that conforms to the criteria given by the user agent***.
 - Majority of the url has status code `200`- `OK` as Successful response, followed by `403`- `(Forbidden)`, `404`- `(Not Found)` and `ConnectionError`.
 
-### Code explanation:
-instead of using str.format() method requires more manual effort,
-#  "{}" to mark where a variable will be substituted and also need to provide information to be formatted
-# for example line 40, "({}) {}.format(status_code, url)"
+### Explanation on code used:
+instead of using str.format() method requires more manual effort and"{}" to mark where a variable will be substituted and also need to provide information to be formatted.
+The solution uses formatted string literal, "f" before opening quotation mark, inside this string, you can write Python expression between "{}" refer to variable or literal values, instead of using str.format() method requires more manual effort,for example for line 40, "({}) {}.format(status_code, url)"
