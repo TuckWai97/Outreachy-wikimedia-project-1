@@ -1,8 +1,5 @@
 # csv module is built-in module in Python, so do not need to install, but need to import in script in order to use it.
 # csv module implements classes to read and write tabular data in CSV format
-# For warm reminder: For some modules,you are required to install these modules or package on your computer before able to use it. 
-# On your terminal, write this command "pip install requests"
-# For your information, pip is the package manager for python that used to install module/package, after installed, you will be able to use this module in this code, as you might notify the curly lines below the word has disappear
 #
 import csv
 import requests
@@ -10,8 +7,6 @@ import requests
 # input_csv variable is used to assign the csv file name as a string, as it encases in double quotes "", this is better than hardcoded it into the code, makes it easier to reuse again next time, by just replace the csv file with desired csv file.
 input_csv = "Task 2 - Intern.csv"
 
-# To break the task into smaller chunk, function is used to perform single, specific action that is often repeated task, we can reuse the same function with changing the input, instead of writing similar code again.
-# This makes the code easier to understand, reuseable, more organized and better modularity.
 # get_status_code function is a user-defined function for getting the status code from the url given in the csv file. 
 # Arg: 
 #     csv_url: url string
