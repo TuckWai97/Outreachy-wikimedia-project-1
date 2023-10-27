@@ -67,6 +67,13 @@ There are 2 functions in the script:
 - `https://dibradoras.com.br/2020/12/05/time-de-tradicao-no-feminino-avai-kindermann-tem-craques-formadas-em-casa/` is able to viewed via browser, but output from code is `406`, which is ***response is sent when the web server, after performing server-driven content negotiation, doesn't find any content that conforms to the criteria given by the user agent***.
 - Majority of the url has status code `200`- `OK` as Successful response, followed by `403`- `(Forbidden)`, `404`- `(Not Found)` and `ConnectionError`.
 
-### Explanation on code used:
-instead of using str.format() method requires more manual effort and"{}" to mark where a variable will be substituted and also need to provide information to be formatted.
-The solution uses formatted string literal, "f" before opening quotation mark, inside this string, you can write Python expression between "{}" refer to variable or literal values, instead of using str.format() method requires more manual effort,for example for line 40, "({}) {}.format(status_code, url)"
+### Justification on code used:
+- `catch_status_code_exception_error` function
+   - instead of using str.format() method requires more manual effort and"{}" to mark where a variable will be substituted and also need to provide information to be formatted.
+      My approach uses formatted string literal, "f" before opening quotation mark, inside this string, you can write Python expression between "{}" refer to variable or literal values, instead of using str.format() method requires more manual effort,for example for line 40, "({}) {}.format(status_code, url)"
+      ***Advantage***
+      1. F-strings provide a few advantages over the % operator and the .format() method, such as being:
+         -  More concise and readable: F-strings are generally more readable and concise. Because you can embed variables and expressions directly within the string, they can be easier to understand and maintain.
+         -  Faster: F-strings are also a bit faster than the % operator and .format() method. This efficiency becomes more noticeable in programs that deal with a large number of strings.
+         -  F-strings also have the = specifier, which can help you debug your code by displaying the expression and its resulting value. This feature isn’t available in the other formatting methods. It’s unique to f-strings.
+
