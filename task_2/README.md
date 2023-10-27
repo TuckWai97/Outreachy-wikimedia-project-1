@@ -67,18 +67,24 @@ There are 2 functions in the script:
 - `https://dibradoras.com.br/2020/12/05/time-de-tradicao-no-feminino-avai-kindermann-tem-craques-formadas-em-casa/` is able to viewed via browser, but output from code is `406`, which is ***response is sent when the web server, after performing server-driven content negotiation, doesn't find any content that conforms to the criteria given by the user agent***.
 - Majority of the url has status code `200`- `OK` as Successful response, followed by `403`- `(Forbidden)`, `404`- `(Not Found)` and `ConnectionError`.
 
-### Justification on code used:
+### Justification and explanation on the code used:
 - `catch_status_code_exception_error` function
-   - instead of using str.format() method requires more manual effort and"{}" to mark where a variable will be substituted and also need to provide information to be formatted.
-      My approach uses formatted string literal, "f" before opening quotation mark, inside this string, you can write Python expression between "{}" refer to variable or literal values, instead of using str.format() method requires more manual effort,for example for line 40, "({}) {}.format(status_code, url)"
-      ***Advantage***
-      1. F-strings provide a few advantages over the % operator and the .format() method, such as being:
-         -  More concise and readable: F-strings are generally more readable and concise. Because you can embed variables and expressions directly within the string, they can be easier to understand and maintain.
-         -  Faster: F-strings are also a bit faster than the % operator and .format() method. This efficiency becomes more noticeable in programs that deal with a large number of strings.
-         -  F-strings also have the = specifier, which can help you debug your code by displaying the expression and its resulting value. This feature isn’t available in the other formatting methods. It’s unique to f-strings.
-- "with()" statement is used in exception handling to make code cleaner and much more readable, so there is no need to call file.close() since with statement automatically closes the file after completed reading it.
-    ".open()" function opens a file, return it as file object, `mode` defines which mode you want to open the file.
+   - instead of using `str.format()` method requires more manual effort and `{}` to mark where a variable will be substituted and also need to provide information to be formatted.
+      My approach uses formatted string literal, `f` before opening quotation mark, inside this string, you can write Python expression between `{}` refer to variable or literal values, instead of using str.format() method requires more manual effort,for example for line 40, `({}) {}.format(status_code, url)`
+      - ***Advantages***:
+         1.  More concise and readable: F-strings are generally more readable and concise. Because you can embed variables and expressions directly within the string, they can be easier to understand and maintain.
+         2. Faster: F-strings are also a bit faster than the  `.format()` method. This efficiency becomes more noticeable in programs that deal with a large number of strings.
+         3. F-strings also have the = specifier, which can help you debug your code by displaying the expression and its resulting value. This feature isn’t available in the other formatting methods. It’s unique to f-strings.
+
+- At main function, `with open(input_csv, "r") as inputfile:` is used.
+
+  `open()` function opens a file, return it as file object, `mode` defines which mode you want to open the file.
     'r' - to read an existing file,
     'w' - to create a new file if given file doesn't exist and write to it,
     'a' - to append to existing file content,
     '+' - to create a new file for reading and writing
+
+     - ***Advantages***:
+        1. `with()` statement is used in exception handling to make code cleaner and much more readable
+        2. no need to call file.close() since with statement automatically closes the file after completed reading it.
+
