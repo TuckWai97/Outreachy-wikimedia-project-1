@@ -22,8 +22,6 @@ def get_status_code(csv_url):
 
 # catch_status_code_exception_error function is used handling the status code exception error and get the final output into the required format in task as below:
 # (STATUS_CODE) URL
-# use formatted string literal, "f" before opening quotation mark, inside this string, you can write Python expression between "{}" refer to variable or literal values, instead of using str.format() method requires more manual effort,
-# for example line 40, "({}) {}.format(status_code, url)"
 
 # Args:
 #      url: url string
