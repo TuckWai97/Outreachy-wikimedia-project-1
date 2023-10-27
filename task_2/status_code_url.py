@@ -14,21 +14,15 @@ input_csv = "Task 2 - Intern.csv"
 #     return response status code of  by the specific url.
 #
 def get_status_code(csv_url):
-    # send a GET request, with the URL of the .csv file as url, for accessing data from the url variable, return all data sent from server, including headers and data payload. 
+    # send a GET request, with the URL of the .csv file as url, for accessing data from the url variable, return all data sent from server. 
     response = requests.get(csv_url)
-
-    # get response status code and stores in "status_code" variable
     status_code = response.status_code
-    
-    # return the status code as value
     return status_code
 
 
 # catch_status_code_exception_error function is used handling the status code exception error and get the final output into the required format in task as below:
 # (STATUS_CODE) URL
-#example: (200) https://www.nytimes.com/1999/07/04/sports/women-s-world-cup-sissi-of-brazil-has-right-stuff-with-left-foot.html
 # use formatted string literal, "f" before opening quotation mark, inside this string, you can write Python expression between "{}" refer to variable or literal values, instead of using str.format() method requires more manual effort,
-#  "{}" to mark where a variable will be substituted and also need to provide information to be formatted
 # for example line 40, "({}) {}.format(status_code, url)"
 
 # Args:
@@ -64,14 +58,13 @@ def catch_status_code_exception_error(url):
     
 
 # Implement code using "with open(filename, mode) as alias_filename", by replacing "filename" with your file, and select "mode" as below and "alias_filename" with the alias you would name the file for more convenient.
-# "with()" statement is used in exception handling to make code cleaner and much more readable.
-# There is no need to call file.close() since with statement automatically closes the file after completed reading it.
-# ".open()" function opens a file, return it as file object.
-# mode defines which mode you want to open the file.
+# "with()" statement is used in exception handling to make code cleaner and much more readable, so there is no need to call file.close() since with statement automatically closes the file after completed reading it.
+# ".open()" function opens a file, return it as file object, `mode` defines which mode you want to open the file.
 # 'r' - to read an existing file,
 # 'w' - to create a new file if given file doesn't exist and write to it,
 # 'a' - to append to existing file content,
 # '+' - to create a new file for reading and writing
+
 # in this case, 'r' is used to read the existing file(the Task 2-Intern.csv that assigned as 'input_csv' as on the line 11)
 with open(input_csv, "r") as inputfile: 
 
@@ -85,7 +78,7 @@ with open(input_csv, "r") as inputfile:
     for url_row in csv_file:
 
         # in Task 2 = Intern.csv, the first column which is column 0 contains the url
-        # uindexes 0 to get the first item for the "url_row" list
+        # indexes 0 to get the first item for the "url_row" list
         url = url_row[0]
         
         # calls "catch_status_code_exception_error()" function and store the result in "output_status_code_url" variable
